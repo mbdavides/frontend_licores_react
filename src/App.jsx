@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link, Routes, Route } from 'react-router-dom';
-
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Login from './components/login/Login';
 import NotFound from './components/notfound/NotFound';
+import './App.css';
 
 export default function App() {
 	const [loggedIn, setLogin] = React.useState(false);
@@ -41,6 +41,7 @@ export default function App() {
 					<Link to="about">About</Link>
 					<button onClick={handleLogout}>Logout</button>
 				</nav>
+
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="about" element={<About />} />
